@@ -1,24 +1,17 @@
-# README
+# Number Converter 3000
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Enter your number: 
+[                ]
 
-Things you may want to cover:
+Convert to base:
+[                ]
 
-* Ruby version
+[Convert]
 
-* System dependencies
+[Total] in base [n] is [result]
 
-* Configuration
+## Controller
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###NumberConverterController
+- index
+- 'rails g controller NumberConverter index'

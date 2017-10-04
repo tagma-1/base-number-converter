@@ -1,0 +1,43 @@
+<h1>Number Converter 3000</h1>
+
+<%= form_with(local: :true) do |f| %>
+  
+  <div class="form-group">
+    <%= f.label :number, 'Enter your number:' %>
+    <%= f.text_field :number, value: @number %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= f.label :base, 'Convert to base:' %>
+    <%= f.text_field :base, value: @base %>
+  </div>
+  
+  <button type="submit" class="btn btn-default">Convert</button>
+  
+<% end %>
+<br>
+
+<% if @number.present? %>
+  <p class="border"><%= @number %> in base <%= @base %> is: <strong><%= number_to_base(@number, @base) %></strong></p>
+<% end %>
+
+<br>
+
+<div>
+  <h2>Conversion History</h2>
+  <table class="table">
+    <tr>
+      <th>Input Number</th>
+      <th>Base</th>
+      <th>Converted</th>
+    </tr>
+    
+    <% @history.each do |conversion| %>
+    <tr>
+      <td><%= conversion.input_number%></td>
+      <td><%= conversion.base%></td>
+      <td><%= number_to_base(conversion.input_number, conversion.base) %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>

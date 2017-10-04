@@ -1,0 +1,17 @@
+<h1>Base <%= @base %> Table</h1>
+
+<div>
+  <table class="table">
+    <tr>
+      <th>Decimal Number</th>
+      <th>Converted Number</th>
+    </tr>
+    
+    <% (0..200).each do |number| %>
+    <tr>
+      <td><%= number %></td>
+      <td><%= number_to_base(number, @base.to_i) %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
