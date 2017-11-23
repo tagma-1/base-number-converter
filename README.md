@@ -2,7 +2,7 @@
 
 A basic rails app to convert decimal numbers into different base numbers (still in progress).
 
-Basic UI:
+## Basic UI:
 
 Enter your number: 
 [                ]
